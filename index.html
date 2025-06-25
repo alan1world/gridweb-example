@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Website Title</h1>
+        </header>
+        
+        <nav class="sidebar" id="sidebar">
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation"><span id="sidebarIcon">&#9776;</span></button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="content-flex">
+                <section class="main-content">
+                    <h2>Main Content</h2>
+                    <p>This is the main content area of the page.</p>
+                </section>
+                <aside class="page-nav">
+                    <h3>Page Navigation</h3>
+                    <ul>
+                        <li><a href="#section1">Section 1</a></li>
+                        <li><a href="#section2">Section 2</a></li>
+                        <li><a href="#section3">Section 3</a></li>
+                    </ul>
+                </aside>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Your Website. All rights reserved.</p>
+        </footer>
+    </div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebarToggle');
+        const sidebarIcon = document.getElementById('sidebarIcon');
+        const container = document.querySelector('.container');
+        let collapsed = false;
+        function setGridColumns(collapsed) {
+            if (collapsed) {
+                container.style.gridTemplateColumns = '5% 1fr 1fr';
+                sidebarIcon.innerHTML = '&#9654;'; // right arrow
+            } else {
+                container.style.gridTemplateColumns = '20% 1fr 1fr';
+                sidebarIcon.innerHTML = '&#9776;'; // hamburger
+            }
+        }
+        toggleBtn.addEventListener('click', () => {
+            collapsed = !collapsed;
+            sidebar.classList.toggle('collapsed', collapsed);
+            setGridColumns(collapsed);
+        });
+        // Initialize state
+        setGridColumns(false);
+    </script>
+</body>
+</html> 
