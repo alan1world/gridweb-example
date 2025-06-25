@@ -5,64 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>Website Title</h1>
+            <div class="header-content">
+                <h1>Grid Layout</h1>
+                <nav class="main-nav">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Documentation</a>
+                    <a href="#" class="nav-link">About</a>
+                </nav>
+            </div>
         </header>
         
         <nav class="sidebar" id="sidebar">
-            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation"><span id="sidebarIcon">&#9776;</span></button>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation">
+                <span id="sidebarIcon">☰</span>
+            </button>
+            <div class="sidebar-content">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#" class="sidebar-link">Overview</a></li>
+                    <li><a href="#" class="sidebar-link">Getting Started</a></li>
+                    <li><a href="#" class="sidebar-link">Components</a></li>
+                    <li><a href="#" class="sidebar-link">Layouts</a></li>
+                    <li><a href="#" class="sidebar-link">Examples</a></li>
+                    <li><a href="#" class="sidebar-link">API Reference</a></li>
+                </ul>
+            </div>
         </nav>
 
         <main class="content">
             <div class="content-flex">
                 <section class="main-content">
-                    <h2>Main Content</h2>
-                    <p>This is the main content area of the page.</p>
+                    <div class="breadcrumb">
+                        <a href="#">Home</a> / <a href="#">Features</a> / <span>Grid Layout</span>
+                    </div>
+                    
+                    <h2>CSS Grid Layout</h2>
+                    <p class="lead">A powerful layout system that lets you create complex web layouts with ease.</p>
+                    
+                    <!-- Tabs Section -->
+                    <div class="tabs">
+                        <div class="tab-nav">
+                            <button class="tab-button active" data-tab="browser-support">Browser Support</button>
+                            <button class="tab-button" data-tab="key-features">Key Features</button>
+                            <button class="tab-button" data-tab="basic-example">Basic Grid Example</button>
+                        </div>
+                        
+                        <!-- Browser Support Tab -->
+                        <div class="tab-content active" id="browser-support">
+                            <div class="feature-card">
+                                <h3>Browser Support</h3>
+                                <div class="support-stats">
+                                    <div class="stat">
+                                        <span class="stat-number">96.23%</span>
+                                        <span class="stat-label">Global Usage</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-number">✅</span>
+                                        <span class="stat-label">Modern Browsers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Key Features Tab -->
+                        <div class="tab-content" id="key-features">
+                            <h3>Key Features</h3>
+                            <ul class="feature-list">
+                                <li>Two-dimensional layout system</li>
+                                <li>Responsive design capabilities</li>
+                                <li>Flexible item sizing</li>
+                                <li>Grid template areas</li>
+                                <li>Automatic placement algorithms</li>
+                                <li>Grid line naming</li>
+                                <li>Subgrid support (newer browsers)</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Basic Grid Example Tab -->
+                        <div class="tab-content" id="basic-example">
+                            <div class="code-example">
+                                <h4>Basic Grid Example</h4>
+                                <pre><code>.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+.header {
+  grid-column: 1 / -1;
+  background: #1e293b;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  background: #334155;
+}
+
+.content {
+  grid-column: 2 / 3;
+  background: #475569;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background: #64748b;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+                
                 <aside class="page-nav">
-                    <h3>Page Navigation</h3>
+                    <h3>On This Page</h3>
                     <ul>
-                        <li><a href="#section1">Section 1</a></li>
-                        <li><a href="#section2">Section 2</a></li>
-                        <li><a href="#section3">Section 3</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#browser-support">Browser Support</a></li>
+                        <li><a href="#key-features">Key Features</a></li>
+                        <li><a href="#examples">Examples</a></li>
+                        <li><a href="#resources">Resources</a></li>
                     </ul>
+                    
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <a href="#" class="quick-link">MDN Documentation</a>
+                        <a href="#" class="quick-link">CSS Grid Guide</a>
+                        <a href="#" class="quick-link">Browser Support</a>
+                    </div>
                 </aside>
             </div>
         </main>
 
         <footer class="footer">
-            <p>&copy; 2024 Your Website. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2024 Grid Layout. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
         </footer>
     </div>
+    
     <script>
         const sidebar = document.getElementById('sidebar');
         const toggleBtn = document.getElementById('sidebarToggle');
         const sidebarIcon = document.getElementById('sidebarIcon');
         const container = document.querySelector('.container');
         let collapsed = false;
+        
         function setGridColumns(collapsed) {
             if (collapsed) {
-                container.style.gridTemplateColumns = '5% 1fr 1fr';
-                sidebarIcon.innerHTML = '&#9654;'; // right arrow
+                container.style.gridTemplateColumns = '60px 1fr 1fr';
+                sidebarIcon.innerHTML = '→';
             } else {
-                container.style.gridTemplateColumns = '20% 1fr 1fr';
-                sidebarIcon.innerHTML = '&#9776;'; // hamburger
+                container.style.gridTemplateColumns = '280px 1fr 1fr';
+                sidebarIcon.innerHTML = '☰';
             }
         }
+        
         toggleBtn.addEventListener('click', () => {
             collapsed = !collapsed;
             sidebar.classList.toggle('collapsed', collapsed);
             setGridColumns(collapsed);
         });
+        
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = button.getAttribute('data-tab');
+                const content = document.getElementById(tabId);
+                if (content) {
+                    content.classList.add('active');
+                }
+            });
+        });
+        
         // Initialize state
         setGridColumns(false);
     </script>
