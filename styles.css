@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #0f172a;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0a1f0a; /* Dark green background */
+    font-family: 'Open Sans', 'Inter', 'Roboto', sans-serif;
     color: #e2e8f0;
     line-height: 1.6;
     min-height: 100vh;
@@ -28,8 +28,8 @@ body {
 /* Header Styles */
 .header {
     grid-area: header;
-    background-color: #1e293b;
-    border-bottom: 1px solid #334155;
+    background-color: #2d5a2d; /* Light green for header */
+    border-bottom: 1px solid #3d6b3d; /* Light green border */
     padding: 0;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     position: sticky;
@@ -73,8 +73,8 @@ body {
 /* Sidebar Styles */
 .sidebar {
     grid-area: sidebar;
-    background-color: #1e293b;
-    border-right: 1px solid #334155;
+    background-color: #051405; /* Darkest green for sidebar */
+    border-right: 1px solid #0a1f0a; /* Dark green border */
     position: relative;
     transition: all 0.3s ease;
     min-width: 60px;
@@ -99,8 +99,8 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #334155;
-    border: 1px solid #475569;
+    background: #0a1f0a; /* Dark green button background */
+    border: 1px solid #1a3d1a; /* Medium green border */
     border-radius: 6px;
     font-size: 1rem;
     cursor: pointer;
@@ -115,7 +115,7 @@ body {
 }
 
 .sidebar-toggle:hover {
-    background-color: #475569;
+    background-color: #1a3d1a; /* Lighter green on hover */
     color: #f8fafc;
 }
 
@@ -158,7 +158,7 @@ body {
 .content {
     grid-area: content;
     padding: 2rem;
-    background-color: #0f172a;
+    background-color: #3d6b3d; /* Lightest green for main content section background */
     overflow-y: auto;
     max-height: calc(100vh - 150px);
 }
@@ -173,10 +173,10 @@ body {
 .main-content {
     flex: 2;
     min-width: 0;
-    background-color: #1e293b;
+    background-color: #051405; /* Darkest green for main content area */
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid #0a1f0a; /* Dark green border */
 }
 
 .breadcrumb {
@@ -186,7 +186,7 @@ body {
 }
 
 .breadcrumb a {
-    color: #60a5fa;
+    color: #00703c; /* GOV.UK green */
     text-decoration: none;
 }
 
@@ -216,7 +216,7 @@ body {
 
 .tab-nav {
     display: flex;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #0a1f0a; /* Dark green border */
     margin-bottom: 2rem;
 }
 
@@ -237,8 +237,8 @@ body {
 }
 
 .tab-button.active {
-    color: #60a5fa;
-    border-bottom-color: #60a5fa;
+    color: #00703c; /* GOV.UK green */
+    border-bottom-color: #00703c;
 }
 
 .tab-content {
@@ -250,8 +250,8 @@ body {
 }
 
 .feature-card {
-    background-color: #334155;
-    border: 1px solid #475569;
+    background-color: #0a1f0a; /* Dark green for feature cards */
+    border: 1px solid #1a3d1a; /* Medium green border */
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -278,7 +278,7 @@ body {
 .stat-number {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #10b981;
+    color: #00703c; /* GOV.UK green */
 }
 
 .stat-label {
@@ -294,7 +294,7 @@ body {
 
 .feature-list li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #0a1f0a; /* Dark green border */
     position: relative;
     padding-left: 1.5rem;
     color: #cbd5e1;
@@ -304,7 +304,7 @@ body {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #10b981;
+    color: #00703c; /* GOV.UK green */
     font-weight: bold;
 }
 
@@ -313,8 +313,8 @@ body {
 }
 
 .code-example {
-    background-color: #0f172a;
-    border: 1px solid #334155;
+    background-color: #0a1f0a; /* Dark green for code examples */
+    border: 1px solid #1a3d1a; /* Medium green border */
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -341,10 +341,10 @@ body {
 /* Page Navigation */
 .page-nav {
     flex: 1;
-    background-color: #1e293b;
+    background-color: #051405; /* Darkest green for page navigation */
     padding: 1.5rem;
     border-radius: 12px;
-    border: 1px solid #334155;
+    border: 1px solid #0a1f0a; /* Dark green border */
     min-width: 250px;
     max-width: 300px;
     height: fit-content;
@@ -383,7 +383,7 @@ body {
 }
 
 .quick-links {
-    border-top: 1px solid #334155;
+    border-top: 1px solid #0a1f0a; /* Dark green border */
     padding-top: 1rem;
 }
 
@@ -396,7 +396,7 @@ body {
 
 .quick-link {
     display: block;
-    color: #60a5fa;
+    color: #00703c; /* GOV.UK green */
     text-decoration: none;
     font-size: 0.875rem;
     font-weight: 500;
@@ -405,15 +405,15 @@ body {
 }
 
 .quick-link:hover {
-    color: #93c5fd;
+    color: #85994b; /* GOV.UK light green */
     text-decoration: underline;
 }
 
 /* Footer Styles */
 .footer {
     grid-area: footer;
-    background-color: #1e293b;
-    border-top: 1px solid #334155;
+    background-color: #2d5a2d; /* Light green for footer */
+    border-top: 1px solid #3d6b3d; /* Light green border */
     padding: 1.5rem 0;
 }
 
@@ -517,7 +517,7 @@ p {
     }
     
     .tab-button.active {
-        border-left-color: #60a5fa;
+        border-left-color: #00703c; /* GOV.UK green */
         border-bottom-color: transparent;
     }
 } 
